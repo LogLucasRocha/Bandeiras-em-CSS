@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palau</title>
+  <style>
+    .flag {
+      width: 1600px;
+      height: 1000px;
+      background-color: #0085CA;
+    }
+
+    .ball {
+      width: 600px;
+      height: 600px;
+      background-color: #FFD100;
+      border-radius: 50%;
+      position: absolute;
+      margin-top: 200px;
+      margin-left: 233px;
+    }
+
+    .code-container{
+      margin-top: 50px;
+    }
+    
+    .code-textarea{
+      width: 400px;
+      height: 200px;
+    }
+
+    .copy-button{
+      display: block;
+      margin-top: 10px;
+    }
+
+    @media (min-width: 1600px){
+      .flag{
+        width: calc(1600px / 2);
+        height: calc(1000px / 2);
+      }
+
+      .ball{
+        width: calc(600px / 2);
+        height: calc(600px / 2);
+        margin-top: calc(200px / 2);
+        margin-left: calc(233px / 2);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="flag">
+    <div class="ball"></div>
+  </div>
+
+  <div class="code-container">
+    <textarea class="code-textarea" readonly>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palau</title>
+  <style>
+    .flag {
+    width: 1600px;
+    height: 1000px;
+    background-color: #0085CA;
+    }
+
+    .ball {
+     width: 600px;
+     height: 600px;
+     background-color: #FFD100;
+     border-radius: 50%;
+     position: absolute;
+     margin-top: 200px;
+     margin-left: 233px;
+     }
+
+  </style>
+</head>
+
+<body>
+  <div class="flag">
+    <div class="ball"></div>
+  </div>
+</body>
+
+</html>
+    </textarea>
+    <button class="copy-button" onclick="copyCode()">Copiar Código</button>
+  </div>
+
+  <script>
+    function copyCode() {
+      const codeTextarea = document.querySelector('.code-textarea');
+      codeTextarea.select();
+      document.execCommand('copy');
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.header{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold ;
+}
+
+.level-1{
+  text-align: center;
+}
+
+.flags-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flag {
+  margin: 30px 20px 50px 20px;
+  position: relative;
+}
+
+#japao{
+  border: 1px solid rgb(212, 212, 212);
+}
+
+
+.flag::before {
+  content: "#1: PALAU";
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.flag:nth-child(2)::before {
+  content: "#2: JAPãO";
+}
+
+.flag:nth-child(3)::before {
+  content: "#3: Ucrânia";
+}
+
+
+.flag::after{
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  text-align: center;
+  left: 0px;
+
+}
