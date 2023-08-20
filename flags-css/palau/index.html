@@ -7,6 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Palau</title>
   <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .flag {
       width: 1600px;
       height: 1000px;
@@ -23,81 +29,175 @@
       margin-left: 233px;
     }
 
-    .code-container{
+    .code-container {
       margin-top: 50px;
     }
-    
-    .code-textarea{
+
+    .code-textarea {
       width: 400px;
       height: 200px;
     }
 
-    .copy-button{
+    .copy-button {
       display: block;
       margin-top: 10px;
     }
 
-    @media (min-width: 1600px){
-      .flag{
+    @media (min-width: 280px) {
+      .flag {
+        width: calc(1600px / 6);
+        height: calc(1000px / 6);
+      }
+
+      .ball {
+        width: calc(600px / 6);
+        height: calc(600px / 6);
+        margin-top: calc(200px / 6);
+        margin-left: calc(233px / 6);
+      }
+
+      .code-textarea {
+        width: calc(1600px / 6);
+        height: calc(1000px / 6);
+      }
+    }
+
+    @media (min-width: 320px) {
+      .flag {
+        width: calc(1600px / 5);
+        height: calc(1000px / 5);
+      }
+
+      .ball {
+        width: calc(600px / 5);
+        height: calc(600px / 5);
+        margin-top: calc(200px / 5);
+        margin-left: calc(233px / 5);
+      }
+
+      .code-textarea {
+        width: calc(1600px / 5);
+        height: calc(1000px / 5);
+      }
+    }
+
+    @media (min-width: 375px) {
+      .flag {
+        width: calc(1600px / 4.5);
+        height: calc(1000px / 4.5);
+      }
+
+      .ball {
+        width: calc(600px / 4.5);
+        height: calc(600px / 4.5);
+        margin-top: calc(200px / 4.5);
+        margin-left: calc(233px / 4.5);
+      }
+
+      .code-textarea {
+        width: calc(1600px / 4.5);
+        height: calc(1000px / 4.5);
+      }
+    }
+
+    @media(min-width: 414px) {
+      .flag {
+        width: calc(1600px / 4.2);
+        height: calc(1000px / 4.2);
+      }
+
+      .ball {
+        width: calc(600px / 4.2);
+        height: calc(600px / 4.2);
+        margin-top: calc(200px / 4.2);
+        margin-left: calc(233px / 4.2);
+      }
+
+      .code-textarea {
+        width: calc(1600px / 4.2);
+        height: calc(1000px / 4.2);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .flag {
+        width: calc(1600px / 3);
+        height: calc(1000px / 3);
+      }
+
+      .ball {
+        width: calc(600px / 3);
+        height: calc(600px / 3);
+        margin-top: calc(200px / 3);
+        margin-left: calc(233px / 3);
+      }
+
+      .code-textarea {
+        width: calc(1600px / 3);
+        height: calc(1000px / 3);
+      }
+    }
+
+
+    @media (min-width: 1600px) {
+      .flag {
         width: calc(1600px / 2);
         height: calc(1000px / 2);
       }
 
-      .ball{
+      .ball {
         width: calc(600px / 2);
         height: calc(600px / 2);
         margin-top: calc(200px / 2);
         margin-left: calc(233px / 2);
       }
     }
-
   </style>
 </head>
 
 <body>
-  <div class="flag">
-    <div class="ball"></div>
-  </div>
-
-  <div class="code-container">
-    <textarea class="code-textarea" readonly>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Palau</title>
-  <style>
-    .flag {
-    width: 1600px;
-    height: 1000px;
-    background-color: #0085CA;
-    }
-
-    .ball {
-     width: 600px;
-     height: 600px;
-     background-color: #FFD100;
-     border-radius: 50%;
-     position: absolute;
-     margin-top: 200px;
-     margin-left: 233px;
-     }
-
-  </style>
-</head>
-
-<body>
-  <div class="flag">
-    <div class="ball"></div>
-  </div>
-</body>
-
-</html>
-    </textarea>
-    <button class="copy-button" onclick="copyCode()">Copiar Código</button>
+  <div class="container">
+    <div class="flag">
+      <div class="ball"></div>
+    </div>
+    <div class="code-container">
+      <textarea class="code-textarea" readonly>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palau</title>
+    <style>
+      .flag {
+      width: 1600px;
+      height: 1000px;
+      background-color: #0085CA;
+      }
+      .ball {
+       width: 600px;
+       height: 600px;
+       background-color: #FFD100;
+       border-radius: 50%;
+       position: absolute;
+       margin-top: 200px;
+       margin-left: 233px;
+       }
+    </style>
+    </head>
+    
+    <body>
+    <div class="flag">
+      <div class="ball"></div>
+    </div>
+    </body>
+    
+    </html>
+      </textarea>
+      <button class="copy-button" onclick="copyCode()">Copiar Código</button>
+    </div>
   </div>
 
   <script>
