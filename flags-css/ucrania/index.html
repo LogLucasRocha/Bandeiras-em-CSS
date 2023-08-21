@@ -7,6 +7,25 @@
   <title>Ucrânia</title>
   <style>
     .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+      .code-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .copy-button {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .container-yellow {
       margin-top: 10px;
       height: 500px;
       width: 750px;
@@ -20,14 +39,157 @@
       width: 750px;
       background-color: #005bbb;
     }
+
+    @media(min-width: 280px) {
+      .container-yellow {
+        height: calc(500px / 3);
+        width: calc(750px / 3);
+      }
+
+      .container-blue {
+        height: calc(250px / 3);
+        width: calc(750px / 3);
+      }
+
+      .code-textarea {
+        display: block;
+        margin-top: 20px;
+        width: calc(750px / 3);
+        height: calc(500px / 3);
+      }
+    }
+
+    @media(min-width: 375px) {
+      .container-yellow {
+        height: calc(500px / 2.5);
+        width: calc(750px / 2.5);
+      }
+
+      .container-blue {
+        height: calc(250px / 2.5);
+        width: calc(750px / 2.5);
+      }
+
+      .code-textarea {
+        display: block;
+        margin-top: 20px;
+        width: calc(750px / 2.5);
+        height: calc(500px / 2.5);
+      }
+    }
+
+    @media(min-width: 414px) {
+      .container-yellow {
+        height: calc(500px / 2.2);
+        width: calc(750px / 2.2);
+      }
+
+      .container-blue {
+        height: calc(250px / 2.2);
+        width: calc(750px / 2.2);
+      }
+
+      .code-textarea {
+        display: block;
+        margin-top: 20px;
+        width: calc(750px / 2.2);
+        height: calc(505px / 2.2);
+      }
+    }
+
+    @media(min-width: 667px){
+      .container-yellow {
+        height: calc(500px / 2);
+        width: calc(750px / 2);
+      }
+
+      .container-blue {
+        height: calc(250px / 2);
+        width: calc(750px / 2);
+      }
+
+      .code-textarea {
+        display: block;
+        margin-top: 20px;
+        width: calc(750px / 2);
+        height: calc(500px / 2);
+      }
+    }
+
+    @media(min-width: 768px) {
+      .container-yellow {
+        height: calc(500px / 1.5);
+        width: calc(750px / 1.5);
+      }
+
+      .container-blue {
+        height: calc(250px / 1.5);
+        width: calc(750px / 1.5);
+      }
+
+      .code-textarea {
+        display: block;
+        margin-top: 20px;
+        width: calc(750px / 1.5);
+        height: calc(500px / 1.5);
+      }
+    }
+
   </style>
 </head>
 
 <body>
   <div class="container">
-    <div class="container-blue">
+    <div class="container-yellow">
+      <div class="container-blue">
+      </div>
+    </div>
+    <div class="code-container">
+
+      <textarea class="code-textarea">
+        <!DOCTYPE html>
+        <html lang="en">
+        
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Ucrânia</title>
+          <style>
+            .container {
+              margin-top: 10px;
+              height: 500px;
+              width: 750px;
+              background-color: #ffd500;
+            }
+        
+            .container-blue {
+              position: relative;
+              top: 0px;
+              height: 250px;
+              width: 750px;
+              background-color: #005bbb;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="container-blue">
+            </div>
+          </div>
+        </body>
+        </html>    
+      </textarea>
+      <button class="copy-button" onclick="copyCode()">Copiar Código</button>
     </div>
   </div>
+
+  <script>
+    function copyCode() {
+      const codeTextarea = document.querySelector('.code-textarea');
+      codeTextarea.select();
+      document.execCommand('copy');
+    }
+  </script>
 
 </body>
 
