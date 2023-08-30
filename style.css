@@ -2,6 +2,11 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
+a{
+  display: block;
+  height: 80px;
+}
+
 .header{
   text-align: center;
   font-family: 'Roboto', sans-serif;
@@ -22,7 +27,8 @@ body{
   position: relative;
 }
 
-#japao{
+#japao,
+#poland{
   border: 1px solid rgb(212, 212, 212);
 }
 
