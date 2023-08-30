@@ -51,6 +51,10 @@ a{
   content: "#3: Ucrânia";
 }
 
+.flag:nth-child(4)::before {
+  content: "#4: Polônia";
+}
+
 
 .flag::after{
   position: absolute;

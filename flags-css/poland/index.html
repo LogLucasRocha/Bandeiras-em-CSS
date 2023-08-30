@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polônia</title>
+  <style>
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .code-container{
+      margin-top: 10px;
+    }
+
+    .code-textarea{
+      display: none;
+    }
+
+
+    .flag {
+      background-color: red;
+      display: flex;
+      height: 500px;
+      width: 800px;
+      border: 0.1px solid rgb(156, 156, 156);
+    }
+
+    .container-red {
+      height: 250px;
+      width: 800px;
+      background-color: white;
+    }
+
+    .copy-button {
+      display: block;
+      margin-top: 10px;
+    }
+
+    @media(min-width: 280px) {
+      .flag {
+        height: calc(500px / 2);
+        width: calc(800px / 2);
+      }
+
+      .container-red {
+        height: calc(250px / 2);
+        width: calc(800px / 2);
+      }
+    }
+
+    @media(min-width: 360px){
+      .flag {
+        height: calc(500px / 2.5);
+        width: calc(800px / 2.5);
+      }
+
+      .container-red {
+        height: calc(250px / 2.5);
+        width: calc(800px / 2.5);
+      }
+    }
+
+    @media(min-width: 375px){
+      .flag {
+        height: calc(500px / 2.5);
+        width: calc(800px / 2.5);
+      }
+
+      .container-red {
+        height: calc(250px / 2.5);
+        width: calc(800px / 2.5);
+      }
+    }
+
+    @media(min-width: 414px){
+      .flag {
+        height: calc(500px / 2);
+        width: calc(800px / 2);
+      }
+
+      .container-red {
+        height: calc(250px / 2);
+        width: calc(800px / 2);
+      }
+    }
+
+    @media(min-width: 667px){
+      .flag {
+        height: calc(500px / 1.7);
+        width: calc(800px / 1.7);
+      }
+
+      .container-red {
+        height: calc(250px / 1.7);
+        width: calc(800px / 1.7);
+      }
+    }
+
+    @media(min-width: 768px){
+      .flag {
+        height: calc(500px / 1.5);
+        width: calc(800px / 1.5);
+      }
+
+      .container-red {
+        height: calc(250px / 1.5);
+        width: calc(800px / 1.5);
+      }
+    }
+
+    @media(min-width: 820px){
+      .flag {
+        height: calc(500px / 1.5);
+        width: calc(800px / 1.5);
+      }
+
+      .container-red {
+        height: calc(250px / 1.5);
+        width: calc(800px / 1.5);
+      }
+    }
+
+    @media(min-width: 1024px){
+      .flag {
+        height: calc(500px / 1);
+        width: calc(800px / 1);
+      }
+
+      .container-red {
+        height: calc(250px / 1);
+        width: calc(800px / 1);
+      }
+    }
+
+    @media(min-width: 1180px){
+      .flag {
+        height: calc(500px * 1.2);
+        width: calc(800px * 1.2);
+      }
+
+      .container-red {
+        height: calc(250px * 1.2);
+        width: calc(800px * 1.2);
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="flag">
+      <div class="container-red"></div>
+    </div>
+    <div class="code-container">
+      <textarea class="code-textarea">
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polônia</title>
+  <style>
+
+    .container{
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+    }
+    .flag {
+      background-color: red;
+      display: flex;
+      justify-content: center;
+      height: 500px;
+      width: 800px;
+      border: 0.1px solid rgb(156, 156, 156);
+    }
+
+    .container-red {
+      height: 250px;
+      width: 800px;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="flag">
+      <div class="container-red"></div>
+    </div>
+  </div>
+</body>
+</html>
+      </textarea>
+      <button class="copy-button" onclick="copyCode()">Copiar Código</button>
+    </div>
+  </div>
+
+  <script>
+    function copyCode() {
+      const codeTextarea = document.querySelector('.code-textarea');
+      codeTextarea.select();
+      document.execCommand('copy');
+    }
+  </script>
+</body>
+</html>
