@@ -19,7 +19,7 @@
       background-color: #0085CA;
     }
 
-    .code-textarea {
+    #code-textarea {
       display: none;
     }
 
@@ -173,7 +173,7 @@
       <div class="ball"></div>
     </div>
     <div class="code-container">
-      <textarea class="code-textarea" readonly>
+      <textarea id="code-textarea" readonly>
         <!DOCTYPE html>
         <html lang="en">
         
@@ -214,10 +214,25 @@
 
   <script>
     function copyCode() {
-      const codeTextarea = document.querySelector('.code-textarea');
-      codeTextarea.select();
-      document.execCommand('copy');
-    }
+  const codeTextarea = document.getElementById('code-textarea');
+  const textToCopy = codeTextarea.value;
+  
+  // Criar um elemento de textarea temporário
+  const tempTextarea = document.createElement('textarea');
+  tempTextarea.value = textToCopy;
+  document.body.appendChild(tempTextarea);
+  
+  // Selecionar o texto no textarea temporário
+  tempTextarea.select();
+  document.execCommand('copy');
+  
+  // Remover o textarea temporário
+  document.body.removeChild(tempTextarea);
+  
+  // Alerta ou feedback de que o código foi copiado
+  alert('Código copiado para a área de transferência!');
+}
+
   </script>
 </body>
 
